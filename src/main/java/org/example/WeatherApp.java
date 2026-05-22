@@ -76,9 +76,6 @@ public class WeatherApp extends Application {
         centerBox.setAlignment(Pos.CENTER);
         centerBox.setPadding(new Insets(40));
 
-        Label title = new Label("WEATHER SYSTEM");
-        title.setStyle("-fx-text-fill: white; -fx-font-size: 34px; -fx-font-weight: 800;");
-
         VBox authCard = new VBox(15);
         authCard.getStyleClass().add("glass-card");
         authCard.setMaxWidth(360);
@@ -101,7 +98,7 @@ public class WeatherApp extends Application {
         buttons.getChildren().addAll(registerBtn, loginBtn);
 
         authCard.getChildren().addAll(loginField, passwordField, buttons);
-        centerBox.getChildren().addAll(title, authCard);
+        centerBox.getChildren().addAll(authCard);
         root.getChildren().addAll(createHeader(), centerBox);
 
         loginBtn.setOnAction(e -> {
